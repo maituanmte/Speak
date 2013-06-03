@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/r_speak"
+    style="@android:color/transparent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/histories"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/audio_controller"
+        android:layout_alignParentTop="true" >
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/audio_controller"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/image_description" >
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/play" />
+
+        <SeekBar
+            android:id="@+id/seek_play"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:minHeight="20dip" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:ems="10"
+        android:hint="@string/content_hint"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:minHeight="50dp"
+        android:minLines="8" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>
