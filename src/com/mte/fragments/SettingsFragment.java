@@ -2,7 +2,7 @@ package com.mte.fragments;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.mte.speak.R;
+import com.mte.speaks.R;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;

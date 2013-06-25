@@ -3,7 +3,7 @@ package com.mte.adapters;
 import java.util.ArrayList;
 import java.util.List;
 import com.mte.models.Message;
-import com.mte.speak.R;
+import com.mte.speaks.R;
 import android.app.Activity;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;

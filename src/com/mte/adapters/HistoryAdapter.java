@@ -3,7 +3,7 @@ package com.mte.adapters;
 import java.util.ArrayList;
 import java.util.List;
 import com.mte.models.History;
-import com.mte.speak.R;
+import com.mte.speaks.R;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

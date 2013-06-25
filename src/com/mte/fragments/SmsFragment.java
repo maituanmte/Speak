@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import com.mte.speak.R;
+import com.mte.speaks.R;
 import com.mte.adapters.MessageAdapter;
 import com.mte.adapters.MessageAdapter.OnSpeechMessageListener;
 import com.mte.http.Http;

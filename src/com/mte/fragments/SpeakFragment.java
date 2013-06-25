@@ -7,7 +7,7 @@ import com.mte.adapters.HistoryAdapter.OnRespeechListener;
 import com.mte.http.Http;
 import com.mte.http.OnResponseListener;
 import com.mte.models.History;
-import com.mte.speak.R;
+import com.mte.speaks.R;
 import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -26,13 +26,15 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
+import com.google.tts.TTS;
 
+@SuppressWarnings("deprecation")
 public class SpeakFragment extends BaseFragment implements OnClickListener,
 		TextWatcher, OnResponseListener, OnSeekBarChangeListener {
 	public static final String TAG = "SpeakFragment";
 	private HistoryAdapter adapter;
 	private List<History> histories = new ArrayList<History>();
-	private TextToSpeech tts;
+	private TTS tts;
 	private EditText contentEdit;
 	private ImageView playBt;
 	private SeekBar seekBar;
@@ -102,6 +104,7 @@ public class SpeakFragment extends BaseFragment implements OnClickListener,
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	private void readHistory(History his) {
 		Http http = new Http();
 		SharedPreferences settings = getActivity().getSharedPreferences(
@@ -125,7 +128,7 @@ public class SpeakFragment extends BaseFragment implements OnClickListener,
 			http.setOnResponseListener(SpeakFragment.this);
 			http.request();
 		} else {
-			tts.speak(his.getContent(), TextToSpeech.QUEUE_FLUSH, null);
+			this.tts.speak(his.getContent(), 0, null);
 		}
 	}
 
@@ -181,7 +184,7 @@ public class SpeakFragment extends BaseFragment implements OnClickListener,
 		}
 	}
 
-	public void setTts(TextToSpeech tts) {
+	public void setTts(TTS tts) {
 		this.tts = tts;
 	}
 

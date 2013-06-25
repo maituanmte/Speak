@@ -1,9 +1,7 @@
 package com.mte.adapters;
 
 import java.util.List;
-
-import com.mte.speak.R;
-
+import com.mte.speaks.R;
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
